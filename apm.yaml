@@ -9,6 +9,24 @@ spec:
     tls:
       selfSignedCertificate:
         disabled: true
+  config:      
+    name: elastic-apm
+    apm-server:
+      rum:
+        enabled: true
+        anonymous:
+          rate_limit:
+            event_limit: 300
+            ip_limit: 1000
+        allow_origins: ['*']
+        allow_headers: ['']
+        library_pattern: "node_modules|bower_components|~"
+        exclude_from_grouping: "^/webpack"
+        source_mapping:
+          enabled: true
+          index_pattern: "apm-*-sourcemap*"
+          cache:
+            expiration: 5m
   secureSettings:
   - secretName: system-es-elastic-user
   elasticsearchRef:
