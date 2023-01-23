@@ -8,7 +8,7 @@ npm i nestjs-elastic-apm --save
 Renomear .env para .env-dsv
 
 ```bash
-ELASTIC_APM_SERVER_URL="https://ingest-apm.zello.services"
+ELASTIC_APM_SERVER_URL="https://<endereco.com>"
 ELASTIC_APM_SECRET_TOKEN=dfd8e867-79dc-4603-946f-c7584937f8ee
 ELASTIC_APM_ENVIRONMENT=prd
 ELASTIC_APM_ACTIVE=false
@@ -19,7 +19,7 @@ Criar arquivo .env-prd
 Adicionar as linhas:
 
 ```bash
-ELASTIC_APM_SERVER_URL="https://ingest-apm.zello.services"
+ELASTIC_APM_SERVER_URL="https://<endereco.com>"
 ELASTIC_APM_SECRET_TOKEN=dfd8e867-79dc-4603-946f-c7584937f8ee
 ELASTIC_APM_ENVIRONMENT=prd
 ELASTIC_APM_ACTIVE=true
