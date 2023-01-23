@@ -1,0 +1,17 @@
+apiVersion: apm.k8s.elastic.co/v1
+kind: ApmServer
+metadata:
+  name: system
+spec:
+  version: 8.6.0
+  count: 1
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
+  secureSettings:
+  - secretName: system-es-elastic-user
+  elasticsearchRef:
+    name: system
+  kibanaRef:
+    name: system
